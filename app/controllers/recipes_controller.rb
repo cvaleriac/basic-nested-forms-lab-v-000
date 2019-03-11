@@ -14,8 +14,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    recipe = Recipe.create(recipe_params)
-    Recipe.save
+    @recipe = Recipe.create(recipe_params)
+    @recipe.save
     redirect_to recipe_path
   end
 
